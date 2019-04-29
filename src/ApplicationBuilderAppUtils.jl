@@ -15,7 +15,7 @@ Note that this will return false when _executing_ a statically compiled program;
 returns true _during_ compilation. It is intended for use in top-level, global statements.
 """
 function is_static_compiling()
-    get(ENV, "COMPILING_APPLE_BUNDLE", "false")
+    get(ENV, "COMPILING_APPLE_BUNDLE", "") == "true"
 end
 
 """
